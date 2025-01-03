@@ -12,7 +12,6 @@ import 'package:meta/meta.dart';
 part 'bloc_base.dart';
 part 'emitter.dart';
 
-/// An 
 
 abstract class BlocEventSink<Event extends Object?> implements ErrorSink {
   ///Adds an [event] to the sink.
@@ -47,7 +46,7 @@ typedef EventTransformer<Event> = Stream<Event> Function(
 
 abstract class Bloc<Event, State> extends BlocBase<State> implements BlocEventSink<Event> {
   ///{@macro bloc}
-  Bloc(State initialState) : super(initialState);
+  Bloc(super.initialState);
 
   /// The current [BlocObserver] instance.
   static BlocObserver observer = const _DefaultBlocObserver();

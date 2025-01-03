@@ -53,6 +53,7 @@ abstract class BlocBase<State>
 implements StateStreamableSource<State>, Emittable<State>, ErrorSink{
   
   BlocBase(this._state){
+    // ignore: invalid_use_of_protected_member
     _blocObserver.onCreate(this);
   }
 

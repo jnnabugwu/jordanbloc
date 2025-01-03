@@ -1,4 +1,3 @@
-import 'package:jordanbloc/src/bloc/bloc.dart';
 import 'package:jordanbloc/src/bloc/change.dart';
 import 'package:meta/meta.dart';
 
@@ -11,10 +10,10 @@ import 'package:meta/meta.dart';
 class Transition<Event, State> extends Change<State> {
   /// {@macro transition}
   const Transition({
-    required State currentState,
+    required super.currentState,
     required this.event,
-    required State nextState,
-  }) : super(currentState: currentState, nextState: nextState);
+    required super.nextState,
+  });
 
   final Event event;
 
