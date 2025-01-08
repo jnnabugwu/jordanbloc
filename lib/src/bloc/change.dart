@@ -14,8 +14,7 @@ class Change<State> {
   final State nextState;
 
   @override
-  bool operator ==(Object other) {
-    // TODO: implement ==
+  bool operator == (Object other) {
     identical(this, other) || 
     other is Change<State> && 
           runtimeType == other.runtimeType &&
